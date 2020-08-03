@@ -1,8 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {ComponentMaxInlineDeclarationsRule} from "codelyzer/index";
+import {MainLayoutComponent} from "./shared/components/main-layout/main-layout.component";
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '', component: MainLayoutComponent, children: [
+
+    ]
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
